@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rancho&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 1;
+    padding: 10px 50px;
+}
+header .brand{
+    color: red;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+header .navigation{
+    list-style: none;
+}
+header .navigation .navigation-items a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    display: inline-block;
+    color: #000;
+    cursor: pointer;
+    margin-right: 35px;
+    transition: 0.3s ease;
+    position: relative;
+}
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: aqua;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+.container:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/summer-travel.jpg")no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(50px);
+}
+.contact-box{
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+}
+.left{
+    width: 26em;
+    height: 100%;
+    background: url("images/summer-travel.jpg") no-repeat center;
+    background-size: cover;
+}
+.right{
+    padding: 25px 40px;
+}
+h2{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: aqua;
+}
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    background-color: rgba(230, 230, 230, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+.field:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.field:focus{
+    background-color: white;
+    border: 2px solid aqua;
+}
+.area{
+    min-height: 150px;
+}
+#btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: aqua;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: .3s;
+}
+#btn:hover{
+    background-color: aqua;
+}
+#btn2{
+    margin-top: 20px;
+    margin-left: 220px;
+    width: 28%;
+    font-size: 1.1rem;
+    background-color: aqua;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: .3s;
+}
+#btn2:hover{
+    background-color: aqua;
+}
+
+@media (max-width: 1040px){
+    header{
+        padding: 10px 50px;
+    }
+    header .navigation{
+        display: none;
+    }
+    header .navigation.active{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(1, 1, 1, 0.5);
+    }
+    header .navigation.active .navigation-items a{
+        color: #222;
+        font-size: 30px;
+        margin: 20px;
+    }
+    header .navigation.active .navigation-items{
+        background: #fff;
+        width: 100%;
+        height: 600px;
+        max-width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+    }
+    .menu-btn{
+        background: url(images/menu-bar.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    .menu-btn.active{
+        z-index: 999;
+        background: url(images/menu-bar.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+    }
+}
