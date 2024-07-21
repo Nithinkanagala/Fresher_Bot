@@ -174,7 +174,33 @@ section{
     transition: 2s ease;
     transition-property: clip-path;
 }
-
+.title-tours{
+    text-align: center;
+}
+.card {
+    margin-bottom: 30px;
+}
+.card img{
+    height: 250px;
+}
+.star-rating {
+    color: #ffc107;
+    font-size: 1.2em;
+}
+.star-rating .far {
+    color: #ffc107;
+}
+.price {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #6c757d;
+    font-size: 1em;
+    margin-right: 10px;
+}
 @media (max-width: 1040px){
     header{
         padding: 10px 50px;
