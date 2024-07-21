@@ -10,7 +10,7 @@ body{
     z-index: 777;
     content: '';
     position: absolute;
-    background: rgba(3, 96, 251, 0.3);
+    background: rgba(251, 252, 252, 0.3);
     width: 100%;
     height: 100%;
 }
