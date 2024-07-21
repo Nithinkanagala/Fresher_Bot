@@ -84,6 +84,7 @@ section #text{
     line-height: 0.55em;
     font-family: "Rancho", cursive;
     transform: translateY(-50px);
+    margin-bottom: 250px;
 }
 section #text span{
     font-size: 0.2em;
